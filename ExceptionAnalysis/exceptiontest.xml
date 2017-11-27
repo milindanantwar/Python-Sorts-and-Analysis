@@ -1,0 +1,1475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3549978-A5F9-4EF3-A24F-458081573AB8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MindMatrix.Libraries.Entities</RootNamespace>
+    <AssemblyName>MindMatrix.Libraries.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugSymbols>true</DebugSymbols>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugSymbols>true</DebugSymbols>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;brands</DefineConstants>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ABCpdf, Version=10.1.2.4, Culture=neutral, PublicKeyToken=a7a0b3f5184f2169, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Binaries\ABCpdf.DLL</HintPath>
+    </Reference>
+    <Reference Include="ConnectwiseCRM">
+      <HintPath>..\..\Binaries\ConnectwiseCRM.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Apps, Version=2.1.0.0, Culture=neutral, PublicKeyToken=e6feebfe441b89cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Applications\MindMatrix.Applications.Web\services\external\Google.GData.Apps.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client, Version=2.1.0.0, Culture=neutral, PublicKeyToken=04a59ca9b0273830, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Applications\MindMatrix.Applications.Web\services\external\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Contacts, Version=2.1.0.0, Culture=neutral, PublicKeyToken=7e065189dd4b982f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Applications\MindMatrix.Applications.Web\services\external\Google.GData.Contacts.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Extensions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0b4c5df2ebf20876, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Applications\MindMatrix.Applications.Web\services\external\Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Binaries\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Mindmatrix.CustomControls, Version=1.0.1316.2212, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Binaries\Mindmatrix.CustomControls.dll</HintPath>
+    </Reference>
+    <Reference Include="MSDynamicsConnector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Binaries\MSDynamicsConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.UI, Version=2010.1.415.20, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Binaries\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyVersionInfo.cs">
+      <Link>Properties\AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AddonProvider.cs" />
+    <Compile Include="AddonProvider.DataContext.cs">
+      <DependentUpon>AddonProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APIHttpRequestLogs.cs" />
+    <Compile Include="APIHttpRequestLogs.DataContext.cs" />
+    <Compile Include="Assets\Asset.cs" />
+    <Compile Include="Assets\Asset.DataContext.cs">
+      <DependentUpon>Asset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\AssetsCategoryLink.cs" />
+    <Compile Include="Assets\AssetsCategoryLinks.DataContext.cs" />
+    <Compile Include="Assets\AssetSharingNotification.cs" />
+    <Compile Include="Assets\AssetSharingNotification.DataContext.cs">
+      <DependentUpon>AssetSharingNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\AssetType.cs" />
+    <Compile Include="Assets\AssetType.DataContext.cs">
+      <DependentUpon>AssetType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\AssetTypeField.cs" />
+    <Compile Include="Assets\AssetTypeField.DataContext.cs">
+      <DependentUpon>AssetTypeField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\AssetTypeRelation.cs" />
+    <Compile Include="Assets\AssetTypeRelation.DataContext.cs">
+      <DependentUpon>AssetTypeRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\AssetTypeRelationLink.cs" />
+    <Compile Include="Assets\AssetTypeRelationLink.DataContext.cs">
+      <DependentUpon>AssetTypeRelationLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Audit.cs" />
+    <Compile Include="Audit.DataContext.cs">
+      <DependentUpon>Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Brands\Brand.cs" />
+    <Compile Include="Brands\Brand.DataContext.cs">
+      <DependentUpon>Brand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Brands\BrandFile.cs" />
+    <Compile Include="Brands\BrandFile.DataContext.cs">
+      <DependentUpon>BrandFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Brands\BrandTextBlock.cs" />
+    <Compile Include="Brands\BrandTextBlock.DataContext.cs">
+      <DependentUpon>BrandTextBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Brands\BrandTheme.cs" />
+    <Compile Include="Brands\BrandTheme.DataContext.cs">
+      <DependentUpon>BrandTheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Certification.cs" />
+    <Compile Include="Certification.DataContext.cs">
+      <DependentUpon>Certification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company.cs" />
+    <Compile Include="Company.DataContext.cs">
+      <DependentUpon>Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyConfiguration.cs" />
+    <Compile Include="CompanyConfiguration.DataContext.cs">
+      <DependentUpon>CompanyConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyContactField.cs" />
+    <Compile Include="CompanyContactField.DataContext.cs">
+      <DependentUpon>CompanyContactField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyContactlist.cs" />
+    <Compile Include="CompanyContactlist.DataContext.cs">
+      <DependentUpon>CompanyContactlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyListDailyContactCount.cs" />
+    <Compile Include="CompanyListDailyContactCount.DataContext.cs">
+      <DependentUpon>CompanyListDailyContactCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyPersonalizedTheme.cs" />
+    <Compile Include="CompanyPersonalizedTheme.DataContext.cs">
+      <DependentUpon>CompanyPersonalizedTheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyStat.cs" />
+    <Compile Include="CompanyStat.DataContext.cs">
+      <DependentUpon>CompanyStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Configuration.DataContext.cs">
+      <DependentUpon>Configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\Contact.cs" />
+    <Compile Include="Contacts\Contact.DataContext.cs">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactActivityFeed.cs" />
+    <Compile Include="Contacts\ContactActivityFeed.DataContext.cs">
+      <DependentUpon>ContactActivityFeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactActivityFeedData.cs" />
+    <Compile Include="Contacts\ContactActivityFeedData.DataContext.cs">
+      <DependentUpon>ContactActivityFeedData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactAsset.cs" />
+    <Compile Include="Contacts\ContactAsset.DataContext.cs">
+      <DependentUpon>ContactAsset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactBounce.cs" />
+    <Compile Include="Contacts\ContactBounce.DataContext.cs">
+      <DependentUpon>ContactBounce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactCompany.cs" />
+    <Compile Include="Contacts\ContactCompany.DataContext.cs">
+      <DependentUpon>ContactCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactCompanyIP.cs" />
+    <Compile Include="Contacts\ContactCompanyIP.DataContext.cs">
+      <DependentUpon>ContactCompanyIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactCompanySharing.cs" />
+    <Compile Include="Contacts\ContactCompanySharing.DataContext.cs">
+      <DependentUpon>ContactCompanySharing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactData.cs" />
+    <Compile Include="Contacts\ContactData.DataContext.cs">
+      <DependentUpon>ContactData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactDistributionList.cs" />
+    <Compile Include="Contacts\ContactDistributionList.DataContext.cs">
+      <DependentUpon>ContactDistributionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactExportEntry.cs" />
+    <Compile Include="Contacts\ContactExportEntry.DataContext.cs">
+      <DependentUpon>ContactExportEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactField.cs" />
+    <Compile Include="Contacts\ContactField.DataContext.cs">
+      <DependentUpon>ContactField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactGeocodingUpdate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contacts\ContactGeocodingUpdate.DataContext.cs">
+      <DependentUpon>ContactGeocodingUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactImportEntry.cs" />
+    <Compile Include="Contacts\ContactImportEntry.DataContext.cs">
+      <DependentUpon>ContactImportEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactInfo.cs" />
+    <Compile Include="Contacts\ContactLeadScoringRule.cs" />
+    <Compile Include="Contacts\ContactLeadScoringRule.DataContext.cs">
+      <DependentUpon>ContactLeadScoringRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactLeadScoringUpdate.cs" />
+    <Compile Include="Contacts\ContactLeadScoringUpdate.DataContext.cs">
+      <DependentUpon>ContactLeadScoringUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactLinkedInLinks.cs" />
+    <Compile Include="Contacts\ContactLinkedInLinks.DataContext.cs">
+      <DependentUpon>ContactLinkedInLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactList.cs" />
+    <Compile Include="Contacts\ContactList.DataContext.cs">
+      <DependentUpon>ContactList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactListLink.cs" />
+    <Compile Include="Contacts\ContactListLink.DataContext.cs">
+      <DependentUpon>ContactListLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactListSharing.cs" />
+    <Compile Include="Contacts\ContactListSharing.DataContext.cs">
+      <DependentUpon>ContactListSharing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactListSharingEntry.cs" />
+    <Compile Include="Contacts\ContactListSharingEntry.DataContext.cs">
+      <DependentUpon>ContactListSharingEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactNotification.cs" />
+    <Compile Include="Contacts\ContactNotification.DataContext.cs">
+      <DependentUpon>ContactNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactNotificationSync.cs" />
+    <Compile Include="Contacts\ContactNotificationSync.DataContext.cs">
+      <DependentUpon>ContactNotificationSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactScoreChange.cs" />
+    <Compile Include="Contacts\ContactScoreChange.DataContext.cs">
+      <DependentUpon>ContactScoreChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactSharedCompanyId.cs" />
+    <Compile Include="Contacts\ContactSharedCompanyId.DataContext.cs">
+      <DependentUpon>ContactSharedCompanyId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactSharing.cs" />
+    <Compile Include="Contacts\ContactSharing.DataContext.cs">
+      <DependentUpon>ContactSharing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactSpiderUpdate.cs" />
+    <Compile Include="Contacts\ContactSpiderUpdate.DataContext.cs">
+      <DependentUpon>ContactSpiderUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactStageHistory.cs" />
+    <Compile Include="Contacts\ContactStageHistory.DataContext.cs">
+      <DependentUpon>ContactStageHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactStat.cs" />
+    <Compile Include="Contacts\ContactStat.DataContext.cs">
+      <DependentUpon>ContactStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactStatusHistory.cs" />
+    <Compile Include="Contacts\ContactStatusHistory.DataContext.cs">
+      <DependentUpon>ContactStatusHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactWatch.cs" />
+    <Compile Include="Contacts\ContactWatch.DataContext.cs">
+      <DependentUpon>ContactWatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactXRefActivity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contacts\ContactXRefActivity.DataContext.cs">
+      <DependentUpon>ContactXRefActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactXRefCRMRecord.cs" />
+    <Compile Include="Contacts\ContactXRefCRMRecord.DataContext.cs">
+      <DependentUpon>ContactXRefCRMRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\FilterProcessing\LeadScoreVisitorConvertor.cs" />
+    <Compile Include="Contacts\FilterProcessing\SmartListProcessor2.cs" />
+    <Compile Include="Contacts\FilterProcessing\FilterVisitor2.cs" />
+    <Compile Include="Contacts\FilterProcessing\LeadScoreVisitor.cs" />
+    <Compile Include="Contacts\FilterProcessing\SmartListProcessor.cs" />
+    <Compile Include="Contacts\FilterProcessing\FilterVisitor.cs" />
+    <Compile Include="AccessibilityManager.cs" />
+    <Compile Include="Contract.cs" />
+    <Compile Include="Contract.DataContext.cs" />
+    <Compile Include="ContractValidate.cs" />
+    <Compile Include="ContractValidate.DataContext.cs" />
+    <Compile Include="CRMAttachment.cs" />
+    <Compile Include="CRMAttachment.DataContext.cs">
+      <DependentUpon>CRMAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMBulkDataLoadBatches.cs" />
+    <Compile Include="CRMBulkDataLoadBatches.DataContext.cs">
+      <DependentUpon>CRMBulkDataLoadBatches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMBulkDataLoadJobs.cs" />
+    <Compile Include="CRMBulkDataLoadJobs.DataContext.cs">
+      <DependentUpon>CRMBulkDataLoadJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMCustomObjectFieldMapping.cs" />
+    <Compile Include="CRMCustomObjectFieldMapping.DataContext.cs">
+      <DependentUpon>CRMCustomObjectFieldMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMCustomObjectLink.cs" />
+    <Compile Include="CRMCustomObjectLink.DataContext.cs">
+      <DependentUpon>CRMCustomObjectLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMFieldMapping.cs" />
+    <Compile Include="CRMFieldMapping.DataContext.cs">
+      <DependentUpon>CRMFieldMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMProcessReports.cs" />
+    <Compile Include="CRMProcessReports.DataContext.cs">
+      <DependentUpon>CRMProcessReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMProvider.cs" />
+    <Compile Include="CRMProvider.DataContext.cs">
+      <DependentUpon>CRMProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSyncEntityLogs.cs" />
+    <Compile Include="CRMSyncEntityLogs.DataContext.cs">
+      <DependentUpon>CRMSyncEntityLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSyncEntityResults.cs" />
+    <Compile Include="CRMSyncEntityResults.DataContext.cs">
+      <DependentUpon>CRMSyncEntityResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSyncLogs.cs" />
+    <Compile Include="CRMSyncLogs.DataContext.cs">
+      <DependentUpon>CRMSyncLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMTokenResponse.cs" />
+    <Compile Include="CRMUserLink.cs" />
+    <Compile Include="CRMUserLink.DataContext.cs">
+      <DependentUpon>CRMUserLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomDataContext.cs" />
+    <Compile Include="CustomDataValidation.cs" />
+    <Compile Include="CustomEntity.cs" />
+    <Compile Include="DashboardActivityFeed.cs" />
+    <Compile Include="DashboardActivityFeed.DataContext.cs">
+      <DependentUpon>DashboardActivityFeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardActivityFeedData.cs" />
+    <Compile Include="DashboardActivityFeedData.DataContext.cs">
+      <DependentUpon>DashboardActivityFeedData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardAnnouncement.cs" />
+    <Compile Include="DashboardAnnouncement.DataContext.cs">
+      <DependentUpon>DashboardAnnouncement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardWidgetConfiguration.cs" />
+    <Compile Include="DashboardWidgetConfiguration.DataContext.cs">
+      <DependentUpon>DashboardWidgetConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext.cs" />
+    <Compile Include="DataContextActions.cs" />
+    <Compile Include="Dev\DevComment.cs" />
+    <Compile Include="Dev\DevComment.DataContext.cs">
+      <DependentUpon>DevComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dev\DeveloperApi.cs" />
+    <Compile Include="Dev\DeveloperApi.DataContext.cs" />
+    <Compile Include="Dev\DevEntry.cs" />
+    <Compile Include="Dev\DevEntry.DataContext.cs">
+      <DependentUpon>DevEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dev\DevPage.cs" />
+    <Compile Include="Dev\DevPage.DataContext.cs">
+      <DependentUpon>DevPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Domain.cs" />
+    <Compile Include="Domain.DataContext.cs">
+      <DependentUpon>Domain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emails\Email.cs" />
+    <Compile Include="Emails\Email.DataContext.cs">
+      <DependentUpon>Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emails\EmailABTest.cs" />
+    <Compile Include="Emails\EmailABTest.DataContext.cs">
+      <DependentUpon>EmailABTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emails\EmailABTestTemplate.cs" />
+    <Compile Include="Emails\EmailABTestTemplate.DataContext.cs">
+      <DependentUpon>EmailABTestTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emails\EmailContact.cs" />
+    <Compile Include="Emails\EmailContact.DataContext.cs">
+      <DependentUpon>EmailContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emails\EmailContactLink.cs" />
+    <Compile Include="Emails\EmailContactLink.DataContext.cs">
+      <DependentUpon>EmailContactLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emails\EmailContactSpooler.cs" />
+    <Compile Include="Emails\EmailContactSpooler.DataContext.cs">
+      <DependentUpon>EmailContactSpooler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emails\EmailEvent.cs" />
+    <Compile Include="Emails\EmailEvent.DataContext.cs">
+      <DependentUpon>EmailEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emails\EmailNotSent.cs" />
+    <Compile Include="Emails\EmailNotSent.DataContext.cs">
+      <DependentUpon>EmailNotSent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emails\EmailTrackingLink.cs" />
+    <Compile Include="Emails\EmailTrackingLink.DataContext.cs">
+      <DependentUpon>EmailTrackingLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="ExceptionMessage.cs" />
+    <Compile Include="ExceptionMessage.DataContext.cs" />
+    <Compile Include="FeedbackComments.cs" />
+    <Compile Include="FeedbackComments.DataContext.cs">
+      <DependentUpon>FeedbackComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackRating.cs" />
+    <Compile Include="FeedbackRating.DataContext.cs">
+      <DependentUpon>FeedbackRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FieldValidation.cs" />
+    <Compile Include="FieldValidation.DataContext.cs">
+      <DependentUpon>FieldValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Files\File.cs" />
+    <Compile Include="Files\File.DataContext.cs">
+      <DependentUpon>File.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Files\FileHandle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Files\FileHandle.DataContext.cs">
+      <DependentUpon>FileHandle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filtering\Filter.cs" />
+    <Compile Include="Filtering\Filter.DataContext.cs">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filtering\FilterCategory.cs" />
+    <Compile Include="Filtering\FilterCategory.DataContext.cs" />
+    <Compile Include="Filtering\FilterCategoryLink.cs" />
+    <Compile Include="Filtering\FilterCategoryLinks.DataContext.cs" />
+    <Compile Include="Filtering\FilterLink.cs" />
+    <Compile Include="Filtering\FilterLink.DataContext.cs">
+      <DependentUpon>FilterLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAccessControl.cs" />
+    <Compile Include="FormAccessControl.DataContext.cs">
+      <DependentUpon>FormAccessControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAccessToken.cs" />
+    <Compile Include="FormAccessToken.DataContext.cs">
+      <DependentUpon>FormAccessToken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCMNotification.cs" />
+    <Compile Include="GCMNotification.DataContext.cs">
+      <DependentUpon>GCMNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeoCodingUpdateLinks.cs" />
+    <Compile Include="Groups\Group.cs" />
+    <Compile Include="Groups\Group.DataContext.cs">
+      <DependentUpon>Group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Groups\GroupLink.cs" />
+    <Compile Include="Groups\GroupLink.DataContext.cs">
+      <DependentUpon>GroupLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ICustomField.cs" />
+    <Compile Include="InactiveUsersCountLog.cs" />
+    <Compile Include="InactiveUsersCountLog.DataContext.cs">
+      <DependentUpon>InactiveUsersCountLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternalPlaybookContact.cs" />
+    <Compile Include="InternalPlaybookContact.DataContext.cs">
+      <DependentUpon>InternalPlaybookContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternalPlaybookUser.cs" />
+    <Compile Include="InternalPlaybookUser.DataContext.cs">
+      <DependentUpon>InternalPlaybookUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyManager.cs" />
+    <Compile Include="KeyValueStorage.cs" />
+    <Compile Include="KeyValueStorage.DataContext.cs">
+      <DependentUpon>KeyValueStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadHistory.cs" />
+    <Compile Include="LeadHistory.DataContext.cs">
+      <DependentUpon>LeadHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadRoutingContactStatus.cs" />
+    <Compile Include="LeadRoutingContactStatus.DataContext.cs">
+      <DependentUpon>LeadRoutingContactStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadRouting\LeadPoolContactNotifications.cs" />
+    <Compile Include="LeadRouting\LeadPoolContactNotifications.DataContext.cs">
+      <DependentUpon>LeadPoolContactNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LeadRequest.DataContext.cs">
+      <DependentUpon>LeadRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadRouting\LeadRoutingContactListLink.cs" />
+    <Compile Include="LeadRouting\LeadRoutingContactListLink.DataContext.cs">
+      <DependentUpon>LeadRoutingContactListLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadRouting\LeadRoutingUserListLink.cs" />
+    <Compile Include="LeadRouting\LeadRoutingUserListLink.DataContext.cs">
+      <DependentUpon>LeadRoutingUserListLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadRouting\LeadRoutingLink.cs" />
+    <Compile Include="LeadRouting\LeadRoutingLink.DataContext.cs">
+      <DependentUpon>LeadRoutingLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadRouting\LeadRoutingPool.cs" />
+    <Compile Include="LeadRouting\LeadRoutingPool.DataContext.cs">
+      <DependentUpon>LeadRoutingPool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadRouting\LeadRoutingContact.cs" />
+    <Compile Include="LeadRouting\LeadRoutingContact.DataContext.cs">
+      <DependentUpon>LeadRoutingContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadRouting\LeadRoutingNewContacts.cs" />
+    <Compile Include="LeadRouting\LeadRoutingNewContacts.DataContext.cs">
+      <DependentUpon>LeadRoutingNewContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadRouting\LeadRoutingStates.cs" />
+    <Compile Include="LeadRouting\LeadRoutingStates.DataContext.cs">
+      <DependentUpon>LeadRoutingStates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadScoring\LeadScore.cs" />
+    <Compile Include="LeadScoring\LeadScore.DataContext.cs">
+      <DependentUpon>LeadScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadScoring\LeadScoringContactUpdate.cs" />
+    <Compile Include="LeadScoring\LeadScoringContactUpdate.DataContext.cs">
+      <DependentUpon>LeadScoringContactUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadScoring\LeadScoringModel.cs" />
+    <Compile Include="LeadScoring\LeadScoringModel.DataContext.cs">
+      <DependentUpon>LeadScoringModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadScoring\LeadScoringModelRule.cs" />
+    <Compile Include="LeadScoring\LeadScoringModelRule.DataContext.cs">
+      <DependentUpon>LeadScoringModelRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadScoring\LeadScoringRule.cs" />
+    <Compile Include="LeadScoring\LeadScoringRule.DataContext.cs">
+      <DependentUpon>LeadScoringRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadScoring\LeadScoringRuleMatch.cs" />
+    <Compile Include="LeadScoring\LeadScoringRuleMatch.DataContext.cs">
+      <DependentUpon>LeadScoringRuleMatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinearPlaybookProgress.cs" />
+    <Compile Include="LinearPlaybookProgress.DataContext.cs">
+      <DependentUpon>LinearPlaybookProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lock.cs" />
+    <Compile Include="Lock.DataContext.cs">
+      <DependentUpon>Lock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDFBudgetActivity.cs" />
+    <Compile Include="MDFBudgetActivity.DataContext.cs">
+      <DependentUpon>MDFBudgetActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDFBudgetCompany.cs" />
+    <Compile Include="MDFBudgetCompany.DataContext.cs">
+      <DependentUpon>MDFBudgetCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDFBudgetPlan.cs" />
+    <Compile Include="MDFBudgetPlan.DataContext.cs">
+      <DependentUpon>MDFBudgetPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDFChangeHistory.cs" />
+    <Compile Include="MDFChangeHistory.DataContext.cs">
+      <DependentUpon>MDFChangeHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDFExpense.cs" />
+    <Compile Include="MDFExpense.DataContext.cs">
+      <DependentUpon>MDFExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDFRequest.cs" />
+    <Compile Include="MDFRequest.DataContext.cs">
+      <DependentUpon>MDFRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MobileDownloadNotifications.cs" />
+    <Compile Include="MobileDownloadNotifications.DataContext.cs">
+      <DependentUpon>MobileDownloadNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MediaActivityLog.cs" />
+    <Compile Include="MediaActivityLog.DataContext.cs">
+      <DependentUpon>MediaActivityLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs" />
+    <Compile Include="Notification.DataContext.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations\OrganizationGroupUserLink.cs" />
+    <Compile Include="Organizations\OrganizationGroupUserLink.DataContext.cs">
+      <DependentUpon>OrganizationGroupUserLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations\OrganizationOpportunityCRMRecords.cs" />
+    <Compile Include="Organizations\OrganizationOpportunityCRMRecords.DataContext.cs" />
+    <Compile Include="Organizations\OrganizationPartnerLink.cs" />
+    <Compile Include="Organizations\OrganizationPartnerLink.DataContext.cs">
+      <DependentUpon>OrganizationPartnerLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations\OrganizationStageHistory.cs" />
+    <Compile Include="Organizations\OrganizationStageHistory.DataContext.cs">
+      <DependentUpon>OrganizationStageHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partner.cs" />
+    <Compile Include="Partner.DataContext.cs">
+      <DependentUpon>Partner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartnerField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Organizations\Organization.cs" />
+    <Compile Include="Organizations\Organization.DataContext.cs">
+      <DependentUpon>Organization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations\OrganizationGroup.cs" />
+    <Compile Include="Organizations\OrganizationGroup.DataContext.cs">
+      <DependentUpon>OrganizationGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations\OrganizationGroupLink.cs" />
+    <Compile Include="Organizations\OrganizationGroupLink.DataContext.cs">
+      <DependentUpon>OrganizationGroupLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations\OrganizationLink.cs" />
+    <Compile Include="Organizations\OrganizationLink.DataContext.cs">
+      <DependentUpon>OrganizationLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartnerField.DataContext.cs">
+      <DependentUpon>PartnerField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPB_Graphs.cs" />
+    <Compile Include="PrintVendor.cs" />
+    <Compile Include="PrintVendor.DataContext.cs">
+      <DependentUpon>PrintVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintVendorDefaultOption.cs" />
+    <Compile Include="PrintVendorDefaultOption.DataContext.cs">
+      <DependentUpon>PrintVendorDefaultOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintVendorSetting.cs" />
+    <Compile Include="PrintVendorSetting.DataContext.cs">
+      <DependentUpon>PrintVendorSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programs\Events\AbstractEvent.cs" />
+    <Compile Include="Programs\Events\ConditionEvent.cs" />
+    <Compile Include="Programs\Events\DecisionEvent.cs" />
+    <Compile Include="Programs\Events\SendEvent.cs" />
+    <Compile Include="Programs\Events\SystemEvent.cs" />
+    <Compile Include="Programs\Events\TimeEvent.cs" />
+    <Compile Include="Programs\Program.cs" />
+    <Compile Include="Programs\Program.DataContext.cs">
+      <DependentUpon>Program.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programs\ProgramContact.cs" />
+    <Compile Include="Programs\ProgramContact.DataContext.cs">
+      <DependentUpon>ProgramContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programs\ProgramContactLink.cs" />
+    <Compile Include="Programs\ProgramContactLink.DataContext.cs">
+      <DependentUpon>ProgramContactLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programs\ProgramContactsRemoved.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Programs\ProgramContactsRemoved.DataContext.cs">
+      <DependentUpon>ProgramContactsRemoved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programs\ProgramEmailLink.cs" />
+    <Compile Include="Programs\ProgramEmailLink.DataContext.cs">
+      <DependentUpon>ProgramEmailLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programs\ProgramSMSLink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Programs\ProgramSMSLink.DataContext.cs">
+      <DependentUpon>ProgramSMSLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\FilterProcessing\FilterVisitor.cs" />
+    <Compile Include="Projects\FilterProcessing\SmartListProcessor.cs" />
+    <Compile Include="Projects\Project.cs" />
+    <Compile Include="Projects\Project.DataContext.cs">
+      <DependentUpon>Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\ProjectContact.cs" />
+    <Compile Include="Projects\ProjectContact.DataContext.cs">
+      <DependentUpon>ProjectContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\ProjectCRMLinks.cs" />
+    <Compile Include="Projects\ProjectCRMLinks.DataContext.cs" />
+    <Compile Include="Projects\ProjectFile.cs" />
+    <Compile Include="Projects\ProjectFile.DataContext.cs">
+      <DependentUpon>ProjectFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\ProjectList.cs" />
+    <Compile Include="Projects\ProjectList.DataContext.cs" />
+    <Compile Include="Projects\ProjectNotifications.cs" />
+    <Compile Include="Projects\ProjectNotifications.DataContext.cs" />
+    <Compile Include="Projects\ProjectNotificationSync.cs" />
+    <Compile Include="Projects\ProjectNotificationSync.DataContext.cs" />
+    <Compile Include="Projects\ProjectSharing.cs" />
+    <Compile Include="Projects\ProjectSharing.DataContext.cs">
+      <DependentUpon>ProjectSharing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\ProjectStageHistory.cs" />
+    <Compile Include="Projects\ProjectStageHistory.DataContext.cs">
+      <DependentUpon>ProjectStageHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\ProjectType.cs" />
+    <Compile Include="Projects\ProjectType.DataContext.cs">
+      <DependentUpon>ProjectType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\ProjectTypeField.cs" />
+    <Compile Include="Projects\ProjectTypeField.DataContext.cs">
+      <DependentUpon>ProjectTypeField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Publishing\Publishing.cs" />
+    <Compile Include="Publishing\Publishing.DataContext.cs">
+      <DependentUpon>Publishing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Publishing\PublishingTemplate.cs" />
+    <Compile Include="Publishing\PublishingTemplate.DataContext.cs">
+      <DependentUpon>PublishingTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purl\Purl.cs" />
+    <Compile Include="Purl\Purl.DataContext.cs">
+      <DependentUpon>Purl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purl\PurlTemplate.cs" />
+    <Compile Include="Purl\PurlTemplate.DataContext.cs">
+      <DependentUpon>PurlTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Results.cs" />
+    <Compile Include="Revision.cs" />
+    <Compile Include="Revision.DataContext.cs">
+      <DependentUpon>Revision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\Role.cs" />
+    <Compile Include="Roles\Role.DataContext.cs">
+      <DependentUpon>Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\RoleChange.cs" />
+    <Compile Include="Roles\RoleLink.cs" />
+    <Compile Include="Roles\RoleLink.DataContext.cs">
+      <DependentUpon>RoleLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\RoleValue.cs" />
+    <Compile Include="Roles\RoleValue.DataContext.cs">
+      <DependentUpon>RoleValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SearchIndex.cs" />
+    <Compile Include="Search\SearchIndex.DataContext.cs">
+      <DependentUpon>SearchIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SearchKeyword.cs" />
+    <Compile Include="Search\SearchKeyword.DataContext.cs">
+      <DependentUpon>SearchKeyword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SearchMetaData.cs" />
+    <Compile Include="Search\SearchMetaData.DataContext.cs">
+      <DependentUpon>SearchMetaData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareOLD\ShareAsset.cs" />
+    <Compile Include="ShareOLD\ShareAsset.DataContext.cs">
+      <DependentUpon>ShareAsset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareOLD\ShareProgram.cs" />
+    <Compile Include="ShareOLD\ShareProgram.DataContext.cs">
+      <DependentUpon>ShareProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareOLD\ShareProgramTemplate.cs" />
+    <Compile Include="ShareOLD\ShareProgramTemplate.DataContext.cs">
+      <DependentUpon>ShareProgramTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareOLD\ShareTemplate.cs" />
+    <Compile Include="ShareOLD\ShareTemplate.DataContext.cs">
+      <DependentUpon>ShareTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sharing\Sharing.cs" />
+    <Compile Include="Sharing\Sharing.DataContext.cs">
+      <DependentUpon>Sharing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleQuery.cs" />
+    <Compile Include="SMS.cs" />
+    <Compile Include="SMS.DataContext.cs">
+      <DependentUpon>SMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMSCampaignResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SMSCampaignResult.DataContext.cs">
+      <DependentUpon>SMSCampaignResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMSContact.cs" />
+    <Compile Include="SMSContact.DataContext.cs">
+      <DependentUpon>SMSContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMSContactLink.cs" />
+    <Compile Include="SMSContactLink.DataContext.cs">
+      <DependentUpon>SMSContactLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMSEvent.cs" />
+    <Compile Include="SMSEvent.DataContext.cs">
+      <DependentUpon>SMSEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SocialDirectorLink.cs" />
+    <Compile Include="SocialDirectorLink.DataContext.cs">
+      <DependentUpon>SocialDirectorLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SocialListening.cs" />
+    <Compile Include="SocialListening.DataContext.cs">
+      <DependentUpon>SocialListening.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SocialMediaPosts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SocialMediaPosts.DataContext.cs">
+      <DependentUpon>SocialMediaPosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Syncing.cs" />
+    <Compile Include="TableExtender.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="Task.DataContext.cs">
+      <DependentUpon>Task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskHealth.cs" />
+    <Compile Include="TaskHealth.DataContext.cs">
+      <DependentUpon>TaskHealth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskStatus.cs" />
+    <Compile Include="TaskStatus.DataContext.cs">
+      <DependentUpon>TaskStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskStatusEntry.cs" />
+    <Compile Include="TaskStatusEntry.DataContext.cs">
+      <DependentUpon>TaskStatusEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Parser\DOM\Asset.cs" />
+    <Compile Include="Templates\Parser\DOM\Container.cs" />
+    <Compile Include="Templates\Parser\DOM\Placeholder.cs" />
+    <Compile Include="Templates\Parser\DOM\poll.cs" />
+    <Compile Include="Templates\Parser\DOM\FormContainer.cs" />
+    <Compile Include="Templates\Parser\DOM\DataRoom.cs" />
+    <Compile Include="Templates\Parser\DOM\DSAsset.cs" />
+    <Compile Include="Templates\Parser\DOM\DSAssetType.cs" />
+    <Compile Include="Templates\Parser\DOM\DSAssetMap.cs" />
+    <Compile Include="Templates\Parser\DOM\DataSource.cs" />
+    <Compile Include="Templates\Parser\DOM\DataSources.cs" />
+    <Compile Include="Templates\Parser\DOM\DocumentManager.cs" />
+    <Compile Include="Templates\Parser\DOM\Element.cs" />
+    <Compile Include="Templates\Parser\DOM\Image.cs" />
+    <Compile Include="Templates\Parser\DOM\Page.cs" />
+    <Compile Include="Templates\Parser\DOM\Positionable.cs" />
+    <Compile Include="Templates\Parser\DOM\Questionnaire.cs" />
+    <Compile Include="Templates\Parser\DOM\Repeater.cs" />
+    <Compile Include="Templates\Parser\DOM\Text.cs" />
+	<Compile Include="Templates\Parser\DOM\Signature.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\Condition.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\Conditions.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\RandomItem.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\Randomizer.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\SimpleVariable.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\Image.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\Literal.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\RepeatedItem.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\Repeater.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\RepeaterTemplate.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\TextHandler.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\Unknown.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\Url.cs" />
+    <Compile Include="Templates\Parser\DOM\TextLogic\Variable.cs" />
+    <Compile Include="Templates\Parser\DOM\Unknown.cs" />
+    <Compile Include="Templates\Parser\DOM\Video.cs" />
+    <Compile Include="Templates\Parser\Manual\manual.cs">
+      <DependentUpon>manual.atg</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Templates\Parser\Manual\Parser.cs" />
+    <Compile Include="Templates\Parser\Outputs\InteractableLiteHtml.cs" />
+    <Compile Include="Templates\Parser\Outputs\Flash.cs" />
+    <Compile Include="Templates\Parser\Outputs\HQPdf.cs" />
+    <Compile Include="Templates\Parser\Outputs\InflyEditor.cs" />
+    <Compile Include="Templates\Parser\Outputs\InteractableHtml.cs" />
+    <Compile Include="Templates\Parser\Outputs\LiteHtml.cs" />
+    <Compile Include="Templates\Parser\Outputs\Output.cs" />
+    <Compile Include="Templates\Parser\Outputs\Html.cs" />
+    <Compile Include="Templates\Parser\Outputs\ProcessPPT.cs" />
+    <Compile Include="Templates\Parser\Outputs\RandomDatatHtml.cs" />
+    <Compile Include="Templates\Parser\Symbols\AssetCache.cs" />
+    <Compile Include="Templates\Parser\Symbols\AssetSymbolCache.cs" />
+    <Compile Include="Templates\Parser\Symbols\Symbol.cs" />
+    <Compile Include="Templates\Parser\Symbols\SymbolManager.cs" />
+    <Compile Include="Templates\Parser\Symbols\SymbolTable.cs" />
+    <Compile Include="Templates\Template.cs" />
+    <Compile Include="Templates\Template.DataContext.cs">
+      <DependentUpon>Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\TemplateApprovalHistory.cs" />
+    <Compile Include="Templates\TemplateApprovalHistory.DataContext.cs">
+      <DependentUpon>TemplateApprovalHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\TemplateAuto.cs" />
+    <Compile Include="Templates\TemplateAuto.DataContext.cs">
+      <DependentUpon>TemplateAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\TemplateData.cs" />
+    <Compile Include="Templates\TemplateData.DataContext.cs">
+      <DependentUpon>TemplateData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\TemplatePage.cs" />
+    <Compile Include="Templates\TemplatePage.DataContext.cs">
+      <DependentUpon>TemplatePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\TemplatePublishing.cs" />
+    <Compile Include="Templates\TemplatePublishing.DataContext.cs">
+      <DependentUpon>TemplatePublishing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\TemplateStat.cs" />
+    <Compile Include="Templates\TemplateStat.DataContext.cs">
+      <DependentUpon>TemplateStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrackContactProjectAssetHistory.cs" />
+    <Compile Include="TrackContactProjectAssetHistory.DataContext.cs">
+      <DependentUpon>TrackContactProjectAssetHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\StatusUpdate.cs" />
+    <Compile Include="Tracking\TrackingAnonymous.cs" />
+    <Compile Include="Tracking\TrackingAnonymous.DataContext.cs">
+      <DependentUpon>TrackingAnonymous.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingContact.cs" />
+    <Compile Include="Tracking\TrackingContact.DataContext.cs">
+      <DependentUpon>TrackingContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingContactData.cs" />
+    <Compile Include="Tracking\TrackingContactData.DataContext.cs">
+      <DependentUpon>TrackingContactData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingContactIP.cs" />
+    <Compile Include="Tracking\TrackingContactIP.DataContext.cs">
+      <DependentUpon>TrackingContactIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingEmailBounced.cs" />
+    <Compile Include="Tracking\TrackingEmailBounced.DataContext.cs">
+      <DependentUpon>TrackingEmailBounced.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingEmailLinkClicked.cs" />
+    <Compile Include="Tracking\TrackingEmailLinkClicked.DataContext.cs">
+      <DependentUpon>TrackingEmailLinkClicked.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingEmailNotClicked.cs" />
+    <Compile Include="Tracking\TrackingEmailNotClicked.DataContext.cs">
+      <DependentUpon>TrackingEmailNotClicked.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingEmailNotOpened.cs" />
+    <Compile Include="Tracking\TrackingEmailNotOpened.DataContext.cs">
+      <DependentUpon>TrackingEmailNotOpened.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingEmailOpen.cs" />
+    <Compile Include="Tracking\TrackingEmailOpen.DataContext.cs">
+      <DependentUpon>TrackingEmailOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingEmailOpened.cs" />
+    <Compile Include="Tracking\TrackingEmailOpened.DataContext.cs">
+      <DependentUpon>TrackingEmailOpened.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingEmailsSent.cs" />
+    <Compile Include="Tracking\TrackingEmailsSent.DataContext.cs">
+      <DependentUpon>TrackingEmailsSent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingEmailUniqueClick.cs" />
+    <Compile Include="Tracking\TrackingEmailUniqueClick.DataContext.cs">
+      <DependentUpon>TrackingEmailUniqueClick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingEmailViewedInBrowser.cs" />
+    <Compile Include="Tracking\TrackingEmailViewedInBrowser.DataContext.cs">
+      <DependentUpon>TrackingEmailViewedInBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingEmailViewInBrowser.cs" />
+    <Compile Include="Tracking\TrackingEmailViewInBrowser.DataContext.cs">
+      <DependentUpon>TrackingEmailViewInBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalForm.cs" />
+    <Compile Include="Tracking\TrackingExternalForm.DataContext.cs">
+      <DependentUpon>TrackingExternalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalFormSignup.cs" />
+    <Compile Include="Tracking\TrackingExternalFormSignup.DataContext.cs">
+      <DependentUpon>TrackingExternalFormSignup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalFormsUniqueSignup.cs" />
+    <Compile Include="Tracking\TrackingExternalFormsUniqueSignup.DataContext.cs">
+      <DependentUpon>TrackingExternalFormsUniqueSignup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalFormUniqueVisit.cs" />
+    <Compile Include="Tracking\TrackingExternalFormUniqueVisit.DataContext.cs">
+      <DependentUpon>TrackingExternalFormUniqueVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalFormVisit.cs" />
+    <Compile Include="Tracking\TrackingExternalFormVisit.DataContext.cs">
+      <DependentUpon>TrackingExternalFormVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalLink.cs" />
+    <Compile Include="Tracking\TrackingExternalLink.DataContext.cs">
+      <DependentUpon>TrackingExternalLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalLinkClicked.cs" />
+    <Compile Include="Tracking\TrackingExternalLinkClicked.DataContext.cs">
+      <DependentUpon>TrackingExternalLinkClicked.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalLinkUniqueClick.cs" />
+    <Compile Include="Tracking\TrackingExternalLinkUniqueClick.DataContext.cs">
+      <DependentUpon>TrackingExternalLinkUniqueClick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalSite.cs" />
+    <Compile Include="Tracking\TrackingExternalSite.DataContext.cs">
+      <DependentUpon>TrackingExternalSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalSiteContactVisit.cs" />
+    <Compile Include="Tracking\TrackingExternalSiteContactVisit.DataContext.cs">
+      <DependentUpon>TrackingExternalSiteContactVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalSitePage.DataContext.cs">
+      <DependentUpon>TrackingExternalSitePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalSitePageVisit.cs" />
+    <Compile Include="Tracking\TrackingExternalSitePage.cs" />
+    <Compile Include="Tracking\TrackingExternalSitePageVisit.DataContext.cs">
+      <DependentUpon>TrackingExternalSitePageVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalSiteReferrer.cs" />
+    <Compile Include="Tracking\TrackingExternalSiteReferrer.DataContext.cs">
+      <DependentUpon>TrackingExternalSiteReferrer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingExternalSiteUniquePageVisit.cs" />
+    <Compile Include="Tracking\TrackingExternalSiteUniquePageVisit.DataContext.cs">
+      <DependentUpon>TrackingExternalSiteUniquePageVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingForm.cs" />
+    <Compile Include="Tracking\TrackingForm.DataContext.cs">
+      <DependentUpon>TrackingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingFormSignup.cs" />
+    <Compile Include="Tracking\TrackingFormSignup.DataContext.cs">
+      <DependentUpon>TrackingFormSignup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingFormsUniqueSignup.cs" />
+    <Compile Include="Tracking\TrackingFormsUniqueSignup.DataContext.cs">
+      <DependentUpon>TrackingFormsUniqueSignup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingFormUniqueVisit.cs" />
+    <Compile Include="Tracking\TrackingFormUniqueVisit.DataContext.cs">
+      <DependentUpon>TrackingFormUniqueVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingFormVisit.cs" />
+    <Compile Include="Tracking\TrackingFormVisit.DataContext.cs">
+      <DependentUpon>TrackingFormVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingHistory.cs" />
+    <Compile Include="Tracking\TrackingHistory.DataContext.cs">
+      <DependentUpon>TrackingHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingKeyword.cs" />
+    <Compile Include="Tracking\TrackingKeyword.DataContext.cs">
+      <DependentUpon>TrackingKeyword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingKeywordContactVisit.cs" />
+    <Compile Include="Tracking\TrackingKeywordContactVisit.DataContext.cs">
+      <DependentUpon>TrackingKeywordContactVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingKeywordHistory.cs" />
+    <Compile Include="Tracking\TrackingKeywordHistory.DataContext.cs">
+      <DependentUpon>TrackingKeywordHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingKeywordUniqueVisit.cs" />
+    <Compile Include="Tracking\TrackingKeywordUniqueVisit.DataContext.cs">
+      <DependentUpon>TrackingKeywordUniqueVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingLinkCache.cs" />
+    <Compile Include="Tracking\TrackingLinkCache.DataContext.cs">
+      <DependentUpon>TrackingLinkCache.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingLinkCompanyCache.cs" />
+    <Compile Include="Tracking\TrackingLinkCompanyCache.DataContext.cs">
+      <DependentUpon>TrackingLinkCompanyCache.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingMedia.cs" />
+    <Compile Include="Tracking\TrackingMediaActivity.cs" />
+    <Compile Include="Tracking\TrackingMediaActivity.DataContext.cs">
+      <DependentUpon>TrackingMediaActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingMediaItem.cs" />
+    <Compile Include="Tracking\TrackingOfflineActivitiy.cs" />
+    <Compile Include="Tracking\TrackingOfflineActivitiy.DataContext.cs" />
+    <Compile Include="Tracking\TrackingPrintTemplate.cs" />
+    <Compile Include="Tracking\TrackingPrintTemplate.DataContext.cs">
+      <DependentUpon>TrackingPrintTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingPrintTemplateContactVisit.cs" />
+    <Compile Include="Tracking\TrackingPrintTemplateContactVisit.DataContext.cs">
+      <DependentUpon>TrackingPrintTemplateContactVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingPrintTemplateUniqueVisit.cs" />
+    <Compile Include="Tracking\TrackingPrintTemplateUniqueVisit.DataContext.cs">
+      <DependentUpon>TrackingPrintTemplateUniqueVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingPrintTemplateUniqueVisits.cs" />
+    <Compile Include="Tracking\TrackingPrintTemplateVisit.cs" />
+    <Compile Include="Tracking\TrackingPrintTemplateVisit.DataContext.cs">
+      <DependentUpon>TrackingPrintTemplateVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingPublishedTemplate.cs" />
+    <Compile Include="Tracking\TrackingPublishedTemplate.DataContext.cs">
+      <DependentUpon>TrackingPublishedTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingPublishedTemplateClicked.cs" />
+    <Compile Include="Tracking\TrackingPublishedTemplateClicked.DataContext.cs">
+      <DependentUpon>TrackingPublishedTemplateClicked.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingPublishedTemplateContactClick.cs" />
+    <Compile Include="Tracking\TrackingPublishedTemplateContactClick.DataContext.cs">
+      <DependentUpon>TrackingPublishedTemplateContactClick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingPublishedTemplateUniqueClick.cs" />
+    <Compile Include="Tracking\TrackingPublishedTemplateUniqueClick.DataContext.cs">
+      <DependentUpon>TrackingPublishedTemplateUniqueClick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingWebinar.cs" />
+    <Compile Include="Tracking\TrackingWebinar.DataContext.cs" />
+    <Compile Include="Tracking\TrackingWebinarContactsLink.cs" />
+    <Compile Include="Tracking\TrackingWebinarContactsLink.DataContext.cs" />
+    <Compile Include="Tracking\TrackingWebSite.cs" />
+    <Compile Include="Tracking\TrackingWebSite.DataContext.cs">
+      <DependentUpon>TrackingWebSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingWebSiteContactVisit.cs" />
+    <Compile Include="Tracking\TrackingWebSiteContactVisit.DataContext.cs">
+      <DependentUpon>TrackingWebSiteContactVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingWebsiteLinksClicked.cs" />
+    <Compile Include="Tracking\TrackingWebsiteLinksClicked.DataContext.cs">
+      <DependentUpon>TrackingWebsiteLinksClicked.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingWebSitePage.cs" />
+    <Compile Include="Tracking\TrackingWebSitePage.DataContext.cs">
+      <DependentUpon>TrackingWebSitePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingWebSitePageVisit.cs" />
+    <Compile Include="Tracking\TrackingWebSitePageVisit.DataContext.cs">
+      <DependentUpon>TrackingWebSitePageVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingWebSiteReferrer.cs" />
+    <Compile Include="Tracking\TrackingWebSiteReferrer.DataContext.cs">
+      <DependentUpon>TrackingWebSiteReferrer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking\TrackingWebSiteUniquePageVisit.cs" />
+    <Compile Include="Tracking\TrackingWebSiteUniquePageVisit.DataContext.cs">
+      <DependentUpon>TrackingWebSiteUniquePageVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="User.DataContext.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAppKey.cs" />
+    <Compile Include="UserAppKey.DataContext.cs">
+      <DependentUpon>UserAppKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAppLog.cs" />
+    <Compile Include="UserAppLog.DataContext.cs">
+      <DependentUpon>UserAppLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLoginHistory.cs" />
+    <Compile Include="UserLoginHistory.DataContext.cs">
+      <DependentUpon>UserLoginHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPayment.cs" />
+    <Compile Include="UserPayment.DataContext.cs">
+      <DependentUpon>UserPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserSetupInformation.cs" />
+    <Compile Include="UserSetupInformation.DataContext.cs">
+      <DependentUpon>UserSetupInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStat.cs" />
+    <Compile Include="UserStat.DataContext.cs">
+      <DependentUpon>UserStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserXRefCRM.cs" />
+    <Compile Include="UserXRefCRM.DataContext.cs">
+      <DependentUpon>UserXRefCRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserXRefDailyContactCountLog.cs" />
+    <Compile Include="UserXRefDailyContactCountLog.DataContext.cs">
+      <DependentUpon>UserXRefDailyContactCountLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserXRefDailyReportEmailNotification.cs" />
+    <Compile Include="UserXRefDailyReportEmailNotification.DataContext.cs">
+      <DependentUpon>UserXRefDailyReportEmailNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserXRefDisabledContactCompany.cs" />
+    <Compile Include="UserXRefDisabledContactCompany.DataContext.cs">
+      <DependentUpon>UserXRefDisabledContactCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserXRefGCM.cs" />
+    <Compile Include="UserXRefGCM.DataContext.cs">
+      <DependentUpon>UserXRefGCM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserXRefGmailAccount.cs" />
+    <Compile Include="UserXRefGmailAccount.DataContext.cs">
+      <DependentUpon>UserXRefGmailAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserXRefReportEmail.cs" />
+    <Compile Include="UserXRefReportEmail.DataContext.cs">
+      <DependentUpon>UserXRefReportEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebABTest.cs" />
+    <Compile Include="WebABTest.DataContext.cs">
+      <DependentUpon>WebABTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebABTestTemplate.cs" />
+    <Compile Include="WebABTestTemplate.DataContext.cs">
+      <DependentUpon>WebABTestTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webinar.cs" />
+    <Compile Include="Webinar.DataContext.cs" />
+    <Compile Include="WebinarContactsLinks.cs" />
+    <Compile Include="WebinarContactsLinks.DataContext.cs" />
+    <Compile Include="WebinarQA.cs" />
+    <Compile Include="WebinarQA.DataContext.cs" />
+    <Compile Include="WebsiteTrackingLink.cs" />
+    <Compile Include="WebsiteTrackingLink.DataContext.cs">
+      <DependentUpon>WebsiteTrackingLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget.cs" />
+    <Compile Include="Widget.DataContext.cs">
+      <DependentUpon>Widget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WidgetConfiguration.cs" />
+    <Compile Include="WidgetConfiguration.DataContext.cs">
+      <DependentUpon>WidgetConfiguration.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeoCodingUpdateLinks.DataContext.cs">
+      <DependentUpon>GeoCodingUpdateLinks.cs</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Templates\Parser\Manual\manual.atg">
+      <Generator>vsCoco</Generator>
+      <LastGenOutput>manual.cs</LastGenOutput>
+      <CustomToolNamespace>MindMatrix.Libraries.Entities.Templates.Manual</CustomToolNamespace>
+    </None>
+    <None Include="Templates\Parser\Manual\Parser.frame" />
+    <None Include="Templates\Parser\Manual\Scanner.frame" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MindMatrix.Libraries.ExternalAPI\MindMatrix.Libraries.ExternalAPI.csproj">
+      <Project>{28b4f575-48a4-42a9-8441-e166b17563d7}</Project>
+      <Name>MindMatrix.Libraries.ExternalAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MindMatrix.Libraries.Framework\MindMatrix.Libraries.Framework.csproj">
+      <Project>{8F482FD7-F07E-480D-BBE6-EC7C86B7B061}</Project>
+      <Name>MindMatrix.Libraries.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MindMatrix.Libraries.Interfaces\MindMatrix.Libraries.Interfaces.csproj">
+      <Project>{D597B244-FE9A-4E09-B1CA-C0EC67E71976}</Project>
+      <Name>MindMatrix.Libraries.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CRMSyncEntityLogs.Schema.xml" />
+    <Content Include="CRMSyncEntityResults.Schema.xml" />
+    <Content Include="CRMSyncLogs.Schema.xml" />
+    <Content Include="Assets\AssetsCategoryLinks.Schema.xml" />
+    <Content Include="Filtering\FilterCategory.Schema.xml" />
+    <Content Include="Filtering\FilterCategoryLinks.Schema.xml" />
+    <Content Include="LeadRoutingContactStatus.Schema.xml" />
+    <Content Include="LeadRouting\LeadPoolContactNotifications.Schema.xml" />
+    <Content Include="LeadRouting\LeadRoutingContactListLinks.Schema.xml" />
+    <Content Include="LeadRouting\LeadRoutingUserListLinks.Schema.xml" />
+    <Content Include="LeadRouting\LeadRoutingLinks.Schema.xml" />
+    <Content Include="LeadRouting\LeadRoutingContacts.Schema.xml" />
+    <Content Include="LeadRouting\LeadRoutingPools.Schema.xml" />
+    <Content Include="LeadRouting\LeadRoutingUsers.Schema.xml" />
+    <Content Include="Organizations\OrganizationOpportunityCRMRecords.Schema.xml" />
+    <Content Include="Tracking\TrackingOfflineActivitiy.Schema.xml" />
+    <Content Include="UserSetupInformation.Schema.xml">
+      <DependentUpon>UserSetupInformation.cs</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CRMLog\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties StartDate="20130627" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
